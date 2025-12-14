@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Reze 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: black;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+}
+
+/* FUNDO */
+.background-photo {
+  position: fixed;
+  inset: 0;
+  background: url("foto1.jpg") center / cover no-repeat;
+  filter: brightness(0.45);
+  z-index: -5;
+}
+
+/* ESTRELAS */
+.stars {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 5% 10%, white, transparent),
+    radial-gradient(2px 2px at 15% 80%, white, transparent),
+    radial-gradient(1px 1px at 25% 30%, white, transparent),
+    radial-gradient(2px 2px at 35% 60%, white, transparent),
+    radial-gradient(1px 1px at 45% 20%, white, transparent),
+    radial-gradient(2px 2px at 55% 90%, white, transparent),
+    radial-gradient(1px 1px at 65% 40%, white, transparent),
+    radial-gradient(2px 2px at 75% 70%, white, transparent),
+    radial-gradient(1px 1px at 85% 15%, white, transparent),
+    radial-gradient(2px 2px at 95% 50%, white, transparent);
+  animation: starsMove 15s linear infinite;
+  z-index: -4;
+}
+
+@keyframes starsMove {
+  to { transform: translateY(-150%); }
+}
+
+/* CONTEÚDO */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  padding: 45px 35px;
+  border-radius: 30px;
+  max-width: 720px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  line-height: 1.6;
+  color: #ff6b6b;
+}
+
+button {
+  margin-top: 35px;
+  padding: 16px 38px;
+  border: none;
+  border-radius: 35px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e60000;
+  transform: scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div class="background-photo"></div>
+<div class="stars"></div>
+
+<section>
+  <div class="box">
+    <h1>
+      Eu ofereceria meu coração<br>
+      sempre por você,<br>
+      minha Reze 🤍
+    </h1>
+
+    <button onclick="abrirSurpresa()">Clique aqui 🌸</button>
+  </div>
+</section>
+
+<script>
+function abrirSurpresa() {
+  document.getElementById("musica").play();
+  window.open("surpresa.html", "_blank");
+}
+</script>
+
+</body>
+</html>
